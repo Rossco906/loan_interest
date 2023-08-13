@@ -1,0 +1,26 @@
+Submission for Loan Calculator.
+
+Input
+-----
+Input is given as command line arguments and must be given in the following order:
+
+StartDate - format required is yyyy-mm-dd
+EndDate - format required is yyyy-mm-dd
+LoanAmount
+Currency
+BaseInterestRate
+Margin
+
+Response is printed to the console.
+
+Error return 1 if validation of parameters fails.
+
+
+-----------
+The requirement for user to be able to view historic calculations was not able to be implemented within the given time.
+Planned implementation would be to serialise each LoanRequest object to json and append it to a file containing all previously serialised requests.
+This json file would be read on application start and each LoanRequest object deserialised so a full list of historic calculation requests can be held in memory.
+
+If the user wanted to update one of these request records. An ID would be passed as a command line parameter as well as any fields in the request(e.g. EndDate) to update.
+
+The updated request would be put through the calculator and results printed to console as normal.
